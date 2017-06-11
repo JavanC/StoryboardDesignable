@@ -1,26 +1,132 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3hj-3y-KxV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Storyboard Designable-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="StoryboardDesignable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ2-Lt-AYz">
+                                <rect key="frame" x="110" y="289.5" width="155" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3h-YY-3za">
+                                <rect key="frame" x="133.5" y="353.5" width="108" height="30"/>
+                                <state key="normal" title="Go Red"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5W-ti-2rq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-j9-8ZD">
+                                <rect key="frame" x="16" y="353.5" width="107.5" height="30"/>
+                                <state key="normal" title="Go Blue"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WX2-wE-p8p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-40-PtJ">
+                                <rect key="frame" x="251.5" y="353.5" width="107.5" height="30"/>
+                                <state key="normal" title="Go Yellow"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUv-Ga-g1J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91222304890000006" green="0.91222304890000006" blue="0.91222304890000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x3h-YY-3za" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="30d-Cz-hY1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DwB-40-PtJ" secondAttribute="trailing" id="3HB-rP-T9e"/>
+                            <constraint firstItem="x3h-YY-3za" firstAttribute="centerY" secondItem="5bi-j9-8ZD" secondAttribute="centerY" id="4Ss-AV-NaE"/>
+                            <constraint firstItem="DwB-40-PtJ" firstAttribute="width" secondItem="5bi-j9-8ZD" secondAttribute="width" id="7ij-GF-RLR"/>
+                            <constraint firstItem="x3h-YY-3za" firstAttribute="width" secondItem="5bi-j9-8ZD" secondAttribute="width" id="AbJ-Ut-Ecp"/>
+                            <constraint firstItem="x3h-YY-3za" firstAttribute="top" secondItem="qZ2-Lt-AYz" secondAttribute="bottom" constant="40" id="BR1-0o-nuG"/>
+                            <constraint firstItem="qZ2-Lt-AYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NDC-IU-Ddb"/>
+                            <constraint firstItem="DwB-40-PtJ" firstAttribute="centerY" secondItem="5bi-j9-8ZD" secondAttribute="centerY" id="YYb-Ow-0UH"/>
+                            <constraint firstItem="qZ2-Lt-AYz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zqm-5S-Dh2"/>
+                            <constraint firstItem="DwB-40-PtJ" firstAttribute="leading" secondItem="x3h-YY-3za" secondAttribute="trailing" constant="10" id="meH-mQ-Owe"/>
+                            <constraint firstItem="5bi-j9-8ZD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="spL-Iy-eNX"/>
+                            <constraint firstItem="x3h-YY-3za" firstAttribute="leading" secondItem="5bi-j9-8ZD" secondAttribute="trailing" constant="10" id="wal-dF-Fra"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Storyboard Designable" id="Ick-rA-Yet"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="blueButton" destination="5bi-j9-8ZD" id="Tlu-4h-Dsc"/>
+                        <outlet property="redButton" destination="x3h-YY-3za" id="H4e-xb-00X"/>
+                        <outlet property="yellowButton" destination="DwB-40-PtJ" id="FbK-xa-D7A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="958" y="61"/>
+        </scene>
+        <!--Blue-->
+        <scene sceneID="r8T-G4-lJR">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" id="pqL-NV-Fzv" customClass="BlueViewController" customModule="StoryboardDesignable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZ5-Nv-RJG"/>
+                        <viewControllerLayoutGuide type="bottom" id="M0X-I3-4fy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XfV-q4-nBo">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-GI-zZ2">
+                                <rect key="frame" x="112.5" y="290" width="151" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HbY-GI-zZ2" firstAttribute="centerY" secondItem="XfV-q4-nBo" secondAttribute="centerY" id="LDW-kG-IcA"/>
+                            <constraint firstItem="HbY-GI-zZ2" firstAttribute="centerX" secondItem="XfV-q4-nBo" secondAttribute="centerX" id="w9V-mc-idK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blue" id="Jaq-5o-0kr"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2X2-yq-IMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="11U-P3-qcj">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="3hj-3y-KxV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajR-IB-UzW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pZE-Cu-NOp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4m-eO-u2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="61"/>
         </scene>
     </scenes>
 </document>
