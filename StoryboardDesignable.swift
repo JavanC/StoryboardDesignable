@@ -7,20 +7,22 @@
 
 import UIKit
 
-/// Add Your Storyboards Name Enum
+// MARK: - Storyboard Enum
+///
+/// How to use?
+/// Step 1: Add Your Storyboards Name to Storyboard Enum
 
 enum Storyboard: String {
     
-    case Main   = "Main"
-    case Second = "Second"
-
+    case Main               = "Main"
+    case YourStoryboardName = "YourStoryboardName"
+    
 }
 
-/// The StoryboardDesignable protocol for UIViewController
+// MARK: - StoryboardDesignable Protocol for UIViewController
 ///
-/// How to use
-/// Step 1: Edit your ViewController's 'Storyboard ID' is same the 'Class Name'
-/// Step 2: let vc = YourViewController.instantiate(from .StoryboardName)
+/// Step 2: Edit your ViewController's 'Storyboard ID' is same the 'Class Name'
+/// Step 3: let vc = YourViewController.instantiate(from .StoryboardName)
 
 protocol StoryboardDesignable : class {}
 
