@@ -10,22 +10,17 @@ Easy way to instantiate ViewController from Storyboard.
 
 * Copy **StoryboardDesignable.swift** to your Xcode Project.
 
-![001](Doc/001.png)
+![001](Docs/001.png)
 
 * Add your Storyboards name Enum in **StoryboardDesignable.swift**.
 
-```
-enum Storyboard: String {
-  	case Main               = "Main"
-    case YourStoryboardName = "YourStoryboardName"
-}
-```
+![002](Docs/002.png)
 
 ## Note
 
 Set your ViewController's **Storyboard ID** is same the **Class Name**.
 
-![002](Doc/002.png)
+![003](Docs/003.png)
 
 ## Usage
 
